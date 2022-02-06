@@ -1,0 +1,62 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Layout</title>
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <style>
+     .wrapper{
+      width:1200px;
+      display:grid;
+      margin: 0 auto;
+      grid-template-columns:repeat(3, 1fr);
+      grid-auto-rows:minmax(100px, auto);
+    }
+    .box{
+      padding:15px;
+      color:#fff;
+      font-weight:bold;
+      text-align:center;
+    }   
+    .box1 {
+      background-color:#3689ff;
+      grid-column:1/4;
+    }
+    .box2 {
+      background-color:#00cf12;
+      grid-row:3/4;
+    }
+    .box3 {
+      background-color:#ff9019;
+      grid-column:2/3;
+      grid-row-start:2;   /* grid-row:2/3; */
+      }
+    .box4 {
+      background-color:#ffd000;
+      grid-column-start:3;   /* grid-column:3/4 */
+      grid-row-start:3;     /* grid-row:3/4 */
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+      <div class="box box3">box3</div>
+      <div class="box box4">box4</div>
+    </div>
+    <div id="wowslider-container1">
+        <div class="ws_images"><ul>
+                <li><img src="data1/images/4.png" alt="4" title="4" id="wows1_0"/></li>
+                <li><img src="data1/images/2.png" alt="2" title="2" id="wows1_1"/></li>
+                <li><a href="http://wowslider.net"><img src="data1/images/1.png" alt="css slideshow" title="1" id="wows1_2"/></a></li>
+                <li><img src="data1/images/3.jpg" alt="3" title="3" id="wows1_3"/></li>
+            </ul></div>
+        <div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">jquery slideshow</a> by WOWSlider.com v9.0</div>
+        <div class="ws_shadow"></div>
+        </div>	
+        <script type="text/javascript" src="engine1/wowslider.js"></script>
+        <script type="text/javascript" src="engine1/script.js"></script>
+  </body>
+  </html>
